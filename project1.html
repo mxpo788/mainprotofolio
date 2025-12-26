@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>login page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(belle-scene-de-foret-japonaise.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logincard{
+            background: transparent;
+           backdrop-filter: blur(12px);
+            width: 30%;
+            height: 600px;
+            color: beige;
+            border-radius: 20px;
+            border: 3px solid grey;
+            box-shadow: 0px 10px 30px rgb(40, 38, 38);
+            transition: 0.7s ease-in-out;
+        }
+        .login{
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+        .input__cards{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 100px;
+        }
+        .fild {
+         display: flex;
+         align-items: center; 
+          gap: 10px;          
+          width: 80%;         
+        }
+
+        .fild label {
+          width: 90px;         
+         color: white;
+         font-weight: bold;
+        }
+
+        .fild input {
+          flex: 1;           
+         padding: 8px;
+         border-radius: 5px;
+         border: 2px solid white;
+         background: transparent;
+         color: white;
+        }
+        .fild input::placeholder {
+          color: white;
+        }
+        .logincard:hover{
+            transform: translateY(-10px);
+        }
+        .login__buton input{
+            padding: 15px;
+            border-radius: 15px;
+            border: 3px solid white;
+            width: 130px;
+            color: white;
+            font-weight: bold;
+            background-color: #5F9EA0;
+            cursor: pointer;
+        }
+        .login__buton :hover{
+            box-shadow: 0px 10px 30px #DCDCDC;
+        }
+        .chek{
+            display: flex;
+            align-items: center;
+            
+
+        }
+        .chek label{
+            width: 120px;
+            color: aliceblue;
+            font-weight: bold;
+        }
+        @media only screen and (max-width: 728px) {
+    .logincard {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .input__cards {
+        margin-top: 50px; /* نقص المسافة شوية */
+        gap: 20px;
+    }
+
+    .fild {
+        flex-direction: column;   /* عمودي */
+        align-items: flex-start;
+        width: 100%;              /* ياخذ عرض الكارت */
+    }
+
+    .fild label {
+        width: 70%;              /* label فوق input */
+        margin-bottom: 5px;
+    }
+
+    .fild input {
+        width: 100%;              /* input كامل العرض */
+        max-width: 100%;          /* ما يخرجش أبداً */
+        box-sizing: border-box;   /* ياخذ في الحسبة border */
+    }
+
+    .login__buton input {
+        width: 100%;              /* زر login كامل العرض */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="logincard">
+         <div class="login">
+           <h1>login</h1>
+         </div>
+         <form class="input__cards" action="chat.html">  
+            <div class="fild">
+           <label for="email">Email:</label>     
+           <input required type="email" id="email" placeholder="Email">
+           </div>
+           <div class="fild"> 
+            <label for="password">Password:</label>
+           <input  required type="password" id="password" placeholder="Password">
+           </div>
+           <div class="chek">
+            <label for="remember me">remember me</label>
+            <input type="checkbox">
+           </div>
+           <div class="login__buton">
+           <input type="submit" id="login" placeholder="login">
+           </div>
+         </form>
+    </div>
+</body>
+</html>  

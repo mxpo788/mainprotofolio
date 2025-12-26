@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mehdi Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0F172A;
+            color: #F9FAFB;
+            font-family: "Nunito", sans-serif;
+        }
+
+        /* ----------- NAVBAR (Upgraded Original) ----------- */
+        .nav1 {
+            background-color: rgba(16, 25, 47, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 25px 20%;
+            display: flex;
+            justify-content: center; /* Centers the whole nav */
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mehd {
+            background: linear-gradient(90deg, #00C6FF, #0072FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 30px;
+            font-family: "Bebas Neue", sans-serif;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .cont {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: #F9FAFB;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 22px;
+            transition: 0.4s ease;
+        }
+
+        .cont a:hover {
+            background-color: #cee6f2;
+            color: #142d4a;
+            transform: scale(1.2);
+        }
+
+        .insta {
+            background: linear-gradient(135deg, #3B82F6, #06B6D4);
+            border-radius: 35px;
+            transition: 0.5s ease-in-out;
+            padding: 5px 15px;
+        }
+
+        .insta a {
+            font-size: 22px;
+            color: white !important;
+        }
+
+        .insta:hover { transform: scale(1.1); }
+
+        /* ----------- SECTIONS ----------- */
+        section {
+            min-height: 90vh;
+            padding: 120px 10% 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hero Card */
+        .proto {
+            margin-top: 50px;
+            background-color: #1E293B;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            transition: 0.4s ease;
+        }
+
+        .proto h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00C6FF;
+        }
+        .proto:hover {
+                        transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(0, 198, 255, 0.2);
+            border-color: #00C6FF;
+        }
+
+        /* ----------- SKILLS (Fixed your Photo layout) ----------- */
+        .my-title {
+            padding: 15px;
+            border-radius: 25px;
+            width:fit-content;
+            background-color: #3B82F6;
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        .card-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .card {
+            background-color: #1E293B;
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(0, 198, 255, 0.2);
+            border-color: #00C6FF;
+        }
+
+        .card img {
+            width: 120px; /* Adjusted size to look cleaner */
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        /* ----------- PROJECTS ----------- */
+        .proj-flex {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .login-btn {
+            background: #0F172A;
+            border: 1px solid #334155;
+            padding: 20px 40px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #0072FF;
+            border-color: #00C6FF;
+        }
+
+        /* ----------- CONTACT ----------- */
+        .back {
+            background-color: #1E293B;
+            border-radius: 25px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            border: 1px solid #3B82F6;
+            transition: 0.4s ease;
+        }
+        .back:hover{
+                        transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(0, 198, 255, 0.2);
+            border-color: #00C6FF;
+        }
+ 
+        .email-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #94A3B8;
+        }
+
+        /* Mobile */
+        @media only screen and (max-width: 768px) {
+            .nav1 { flex-direction: column; gap: 10px; padding: 10px; }
+            .cont a { font-size: 16px; padding: 5px; }
+            .proto h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav1">
+            <a class="mehd" href="#home">MEHDI WEBSITE</a>
+            <div class="cont">
+                <a href="#home">Home</a>
+                <a href="#myskills">Skills</a>
+                <a href="#myproject">Projects</a>
+                <a href="#contactme">Contact</a>
+            </div>
+            <div class="insta">
+                <a href="https://www.instagram.com/v2per_z" target="_blank">Instagram</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="proto">
+                <h1>Hello, I'm a Web Developer</h1>
+                <p>I'm a passionate front-end developer focused on creating beautiful and functional digital experiences. I specialize in turning ideas into clean, interactive code.</p>
+            </div>
+        </section>
+
+        <section id="myskills">
+            <h1 class="my-title">MY SKILLS</h1>
+            <div class="card-list">
+                <div class="card">
+                    <img src="html.jpg" >
+                    <h2>HTML5</h2>
+                </div>
+                <div class="card">
+                    <img src="css.jpg">
+                    <h2>CSS3</h2>
+                </div>
+                <div class="card">
+                    <img src="js.jpg" >
+                    <h2>JavaScript</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="myproject">
+            <div class="proto">
+                <h1>My Projects</h1>
+                <div class="proj-flex">
+                    <a class="login-btn" href="project1.html">
+                        <h2>Login Page</h2>
+                        <span>View Project &rarr;</span>
+                    </a>
+                    <a class="login-btn" href="anim.html">
+                        <h2>Online Store</h2>
+                        <span>View Project &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactme">
+            <div class="back">
+                <h1 style="font-family: 'Bebas Neue'; font-size: 2.5rem; color: #00C6FF;">Contact Me</h1>
+                <div class="email-box">
+                    <i class="fas fa-envelope"></i>
+                    <span>mehdi.djou2018@gmail.com</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
